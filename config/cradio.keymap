@@ -20,6 +20,20 @@
 
 / {
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 4>;
+            bindings = <&kp ESC>;
+        };
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&caps_word>;
+        };
+    };
+
     behaviors {
             ht: hold_tap {
                 label = "hold_tap";
@@ -31,6 +45,13 @@
                 global-quick-tap;
                 bindings = <&kp>, <&kp>;
             };
+            td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            bindings = <&kp>, <&to>;
+        };
         };
 
     keymap {
@@ -48,6 +69,23 @@
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans   &trans           &kp SPACE  &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        symbols_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &kp TILDE  &kp PIPE   &kp HASH   &kp AMPS   &kp CARET       &kp STAR  &kp COLON  &kp SEMI   &trans       &trans 
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          |   |          │          │          │          │          │
+            &kp LT    &kp PRCNT   &kp LBRC   &kp LPAR   &kp LBKT      &kp EQUAL  &kp QMARK  &kp UNDER   &kp PLUS   &kp ENTER 
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &kp GT    &kp DLLR    &kp RBRC   &kp RPAR   &kp RBKT      &kp AT     &kp EXCL   &kp FSLH   &kp MINUS  &kp BSLH  
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans        &trans     &to RIG
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
