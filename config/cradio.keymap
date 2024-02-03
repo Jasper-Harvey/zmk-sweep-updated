@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&to>;
+            bindings = <&kp LSHFT>, <&to NUM>;
             };
         };
 
@@ -65,7 +65,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │    / ?   │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans   &td0 LSHFT NUM           &kp SPACE  &to SYM
+                                             &trans   &td0           &kp SPACE  &to SYM
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
