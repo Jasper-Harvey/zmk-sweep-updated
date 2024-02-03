@@ -44,12 +44,12 @@
                 bindings = <&kp>, <&kp>;
             };
 
-            //td0: tap_dance_0 {
-            //compatible = "zmk,behavior-tap-dance";
-            //#binding-cells = <0>;
-            //tapping-term-ms = <200>;
-            //bindings = <&kp LSHFT>, <&kp N1>;
-            //};
+            td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&to NUM>;
+            };
         };
 
     keymap {
@@ -66,7 +66,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │    / ?   │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans    &trans           &kp SPACE  &to SYM
+                                             &trans    &td0           &kp SPACE  &to SYM
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
