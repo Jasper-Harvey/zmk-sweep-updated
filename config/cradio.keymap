@@ -32,9 +32,8 @@
             bindings = <&caps_word>;
         };
     };
-};
 
-/ {
+
 //    behaviors {
 //        ht: hold_tap {
 //            label = "hold_tap";
