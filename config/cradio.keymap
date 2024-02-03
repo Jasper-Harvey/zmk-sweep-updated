@@ -12,7 +12,7 @@
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
-#define HOME 0
+#define DEF_LAYER 0
 #define RIG 1
 #define LEF 2
 #define TRI 3
@@ -77,7 +77,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │    / ?   │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &to HOME   &td0 LSHIFT NUM   &kp SPACE  &to LEF
+                                          &to DEF_LAYER   &td0 LSHIFT NUM   &kp SPACE  &to LEF
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -103,10 +103,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-           &kp ESC    &kp        &kp        &kp        &kp            &kp        &kp        &kp        &kp        &kp 
+           &kp ESC    &kp        &kp        &kp        &kp            &kp DEL       &kp        &kp        &kp        &kp 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-           &kp TAB    &kp        &kp        &kp        &kp            &kp        &kp        &kp        &kp        &kp 
+           &kp TAB    &kp        &kp        &kp        &kp            &kp BSPC        &kp        &kp        &kp        &kp 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp       &kp        &kp        &kp        &kp            &kp        &kp        &kp        &kp        &kp 
