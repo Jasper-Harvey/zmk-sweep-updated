@@ -19,49 +19,6 @@
 //#define NUM 4
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 4>;
-            bindings = <&kp ESC>;
-        };
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&caps_word>;
-        };
-    };
-
-
-//    behaviors {
-//        ht: hold_tap {
-//            label = "hold_tap";
-//            compatible = "zmk,behavior-hold-tap";
-//            #binding-cells = <2>;
-//            flavor = "tap-preferred";
-//            tapping-term-ms = <190>;
-//            quick-tap-ms = <0>;
-//            global-quick-tap;
-//            bindings = <&kp>, <&kp>;
-//        };
-//        td0: tap_dance_0 {
-//            compatible = "zmk,behavior-tap-dance";
-//            #binding-cells = <2>;
-//            tapping-term-ms = <200>;
-//            quick_tap_ms = <0>;
-//            bindings = <&kp>, <&to>;
-//        };
-    };
-
-//    conditional_layers {
-//        compatible = "zmk,conditional-layers";
-//        tri_layer {
-//            if-layers = <RIG LEF>;
-//            then-layer = <TRI>;
-//        };
-//    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
