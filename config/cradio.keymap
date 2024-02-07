@@ -36,6 +36,11 @@
             key-positions = <16 17>;
             bindings = <&kp BSPC>;
         };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp ENTER>;
+        }
     };
 
     behaviors {
@@ -60,7 +65,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt SYM ENTER>, <&to MISC>;
+            bindings = <&mo SYM>, <&to MISC>;
             };
         };
 
@@ -75,13 +80,14 @@
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   ' "    │
              HRML(A,       S,         D,         F)     &kp G          &kp H      HRMR(J,        K,           L,      SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │    / ?   │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │          │
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans    &td0           &kp SPACE   &td1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+        
 
         symbols_layer {
             bindings = <
@@ -95,7 +101,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp GT    &kp DLLR    &kp RBRC   &kp RPAR   &kp RBKT      &kp AT     &kp EXCL   &kp FSLH   &kp MINUS  &kp BSLH  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to DEF     &trans        &trans     &to MISC
+                                             &to DEF     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
