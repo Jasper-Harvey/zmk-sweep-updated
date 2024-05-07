@@ -109,7 +109,7 @@ default_layer {
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │          │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to DEF    &td0           &kp SPACE   &td1
+                                             &lt NUM DEF  &kp LSHFT   &kp SPACE   &td1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
